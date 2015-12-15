@@ -1,0 +1,95 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+       xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.example.mylogin.MainActivity" >
+    <ImageView
+        android:src="@drawable/pic"
+          android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        
+        />
+<TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+       android:textColor="#0b84aa" 
+       android:gravity="center"
+ 
+        android:text="Welcome" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户名" />
+    <EditText 
+          android:id="@+id/name"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="Enter a username"
+        />
+     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="用户名" />
+      <EditText 
+          android:id="@+id/password"
+          android:inputType="textPassword"
+          android:layout_width="match_parent"
+          android:layout_height="wrap_content"
+          android:hint="password"
+        />
+      <CheckBox 
+                    android:id="@+id/cb"
+                   android:layout_width="match_parent"
+               
+                  android:layout_height="wrap_content"
+                  android:text="记住用户名"
+          />
+      <Button 
+                  android:id="@+id/button"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:onClick="click"
+                  android:layout_marginLeft="40dp"
+                  android:layout_marginRight="40dp"
+                  android:layout_marginTop="20dp"
+                  android:text="登录"
+                  
+          />
+      <Button 
+                   android:layout_marginLeft="40dp"
+                  android:layout_marginRight="40dp"
+                  android:layout_marginTop="10sp"
+                  android:id="@+id/button1"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:onClick="click"
+                  android:text="退出"
+                  
+          />
+      <LinearLayout
+          
+           android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+           >
+          <TextView 
+              android:paddingTop="10dp"
+              android:text="用第三方工具登录"
+              android:layout_height="wrap_content"
+              android:layout_width="wrap_content"
+              android:textColor="#666666"
+              
+              />
+      </LinearLayout>
+
+      <ImageButton
+          android:layout_marginLeft="100dp"
+         android:onClick="click"
+          android:id="@+id/btn"
+          android:layout_width="40dp"
+          android:layout_height="40dp"
+          android:background="@drawable/sina" />
+
+</LinearLayout>
