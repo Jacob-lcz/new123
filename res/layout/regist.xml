@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+  <ImageView
+        android:src="@drawable/regist"
+          android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        />
+<TextView 
+    android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+       android:textColor="#0b84aa" 
+       android:gravity="center"
+ 
+        android:text="Regist" 
+    
+    />
+        
+    <LinearLayout 
+         android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:orientation="horizontal"
+           >
+           <TextView 
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:text="昵称:"
+           />
+    <EditText 
+         android:textSize="15sp"
+      android:layout_marginRight="40dp"
+        android:id="@+id/name"
+        android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+        <LinearLayout 
+         android:layout_height="wrap_content"
+           android:layout_width="match_parent"
+           android:orientation="horizontal"
+           >
+           <TextView 
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:text="账号:"
+           />
+    <EditText 
+      android:singleLine="true"
+     android:textSize="15sp"
+         android:hint="请输入4-20位数字或字母"
+        android:id="@+id/registname"
+        android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginRight="40dp"
+        />
+    </LinearLayout>
+      <LinearLayout 
+         android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+           android:orientation="horizontal"
+           >
+           <TextView 
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:text="密码:"
+           />
+           
+    <EditText 
+        android:layout_marginRight="40dp"
+        android:textSize="15sp"
+         android:singleLine="true"
+         android:inputType="textPassword"
+         android:hint="请输入6-15位数字或字母"
+        android:id="@+id/registpass"
+        android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+       <LinearLayout 
+           
+         android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+           android:orientation="horizontal"
+           >
+           <TextView 
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:text="邮箱:"
+           />
+     <EditText 
+          android:textSize="15sp"
+         android:layout_marginRight="40dp"
+       android:singleLine="true"
+        android:id="@+id/registmail"
+        android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+      <LinearLayout 
+         android:layout_height="wrap_content"
+              android:layout_width="match_parent"
+           android:orientation="horizontal"
+           >
+           <TextView 
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:text="出生日期:"
+           />
+     <EditText 
+     android:layout_marginRight="40dp"
+        android:id="@+id/birth"
+        android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+        />
+    </LinearLayout>
+         
+    
+       <TextView 
+           android:layout_height="wrap_content"
+           android:layout_width="wrap_content"
+           android:text="性别"
+           />
+       
+     <RadioGroup 
+         android:id="@+id/RG"
+         android:orientation="horizontal"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content">
+         <RadioButton 
+             android:layout_height="wrap_content"
+             android:id="@+id/cbman"
+             android:text="男"
+             android:layout_width="wrap_content"
+            />
+            <RadioButton 
+             android:layout_height="wrap_content"
+             android:id="@+id/cbwoman"
+             android:text="女"
+             android:layout_width="wrap_content"
+            />
+     </RadioGroup>
+      
+      
+         <Button 
+                    android:textColor="#FFFFFF"
+                  android:id="@+id/btn"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:onClick="click"
+                  android:layout_marginLeft="40dp"
+                  android:layout_marginRight="40dp"
+                  android:layout_marginTop="20dp"
+                  android:text="提交"
+                  android:textSize="20sp"
+                  android:background="#EE9A00" 
+                  
+          />
+      
+</LinearLayout>

@@ -23,7 +23,7 @@ import android.widget.Toast;
 
 public class info extends Activity {
 
-	private TextView weiboname,location,fans,friends,weibonum;
+	private TextView username,email,lastlogintime,createtime,sex,birthday;
 	private ImageView img;
 	String imguri;
 	
@@ -32,44 +32,26 @@ public class info extends Activity {
 		protected void onCreate(Bundle savedInstanceState) {
 			// TODO Auto-generated method stub
 			super.onCreate(savedInstanceState);
-			setContentView(R.layout.my);
+			setContentView(R.layout.thirdlogin);
 			img=(ImageView) findViewById(R.id.img);
-			weiboname =(TextView) findViewById(R.id.weiboname);
-			location=(TextView) findViewById(R.id.location);
-		    fans=(TextView) findViewById(R.id.fans);
-		   friends=(TextView) findViewById(R.id.friends);
-		   weibonum=(TextView) findViewById(R.id.weibonum);
-		   Handler handler=new Handler();
+			username=(TextView) findViewById(R.id.username);
+			email=(TextView) findViewById(R.id.email);
+			lastlogintime=(TextView) findViewById(R.id.lastlogintime);
+		    createtime=(TextView) findViewById(R.id.createtime);
+		   sex=(TextView) findViewById(R.id.sex);
+//		   Handler handler=new Handler();
 		   Intent intent1=getIntent();
 		
 			Bundle bundle=intent1.getExtras();
-			weiboname.setText("用户名:"+bundle.getString("screen_name"));
-			location.setText( "所在地："+bundle.getString ("location"));
-			fans.setText( "粉丝数："+bundle.getString ("followers_count"));
-			friends.setText( "已关注朋友数："+bundle.getString ("friends_count"));
-			weibonum.setText( "已发微博条数："+bundle.getString ("statuses_count"));
-			String imguri=bundle.getString("profile_image_url");
-		
-			new ImageLoader().showImageByThread(img,imguri);
-		  
+			username.setText("用户名:"+bundle.getString("username"));
+			email.setText( "邮箱："+bundle.getString ("email"));
+			lastlogintime.setText( "上次登陆时间："+bundle.getString ("lastlogintime"));
+			createtime.setText( "账户创建时间："+bundle.getString ("createtime"));
+			sex.setText( "性别："+bundle.getString ("sex"));
+//			String imguri=bundle.getString("profile_image_url");
+//		
+//			new ImageLoader().showImageByThread(img,imguri);
+//		  
 	}
-//			public void run( String imgurl){
-//				URL url;
-//				try {
-//					url = new URL(imgurl);	
-//					HttpURLConnection conn=(HttpURLConnection)url.openConnection();
-//					conn.setReadTimeout(5000);
-//					conn.setRequestMethod("GET");
-//					InputStream in=conn.getInputStream();
-//					final Bitmap bit=BitmapFactory.decodeStream(in);
-//					img.setImageBitmap(bit);
-//				} catch (MalformedURLException e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				} catch (IOException e) {
-//					// TODO Auto-generated catch block
-//					e.printStackTrace();
-//				}
-//			
-//			}
+
 }
