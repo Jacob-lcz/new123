@@ -16,7 +16,7 @@
        android:textColor="#0b84aa" 
        android:gravity="center"
  
-        android:text="Regist" 
+        android:text="注册" 
     
     />
         

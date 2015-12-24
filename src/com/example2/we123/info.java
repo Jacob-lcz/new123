@@ -48,9 +48,9 @@ public class info extends Activity {
 			lastlogintime.setText( "上次登陆时间："+bundle.getString ("lastlogintime"));
 			createtime.setText( "账户创建时间："+bundle.getString ("createtime"));
 			sex.setText( "性别："+bundle.getString ("sex"));
-//			String imguri=bundle.getString("profile_image_url");
+			String imguri=bundle.getString("image");
 //		
-//			new ImageLoader().showImageByThread(img,imguri);
+			new ImageLoader().showImageByThread(img,imguri);
 //		  
 	}
 

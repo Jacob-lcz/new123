@@ -36,7 +36,8 @@ private int month;
 private int day;
 private 	Calendar cal;
 private JSONObject registinfo;
-private String url="http://loginonother.sinaapp.com/index.php/api/info/register/.json";
+public String TAG="regist";
+private String url="http://loginonother.sinaapp.com/api/Customers";
 
 String sex;
 //private 	RadioButton r;
@@ -96,8 +97,12 @@ String sex;
 				
 				 String sex1=sex;
 				// TODO Auto-generated method stub
+//				 构造生成注册MD5（账号加密码）
 				String userid=registname.getText().toString().trim();
 				String pass=registpass.getText().toString().trim();
+				 String lmd5="id:"+userid+"pwd:"+pass;
+				   String registmd5=new MD5(lmd5).md5(lmd5);
+				   
 			final	String email=registmail.getText().toString().trim();
 				String birthday=birth.getText().toString().trim();
 				String  username =name.getText().toString().trim();
@@ -124,16 +129,16 @@ String sex;
 					 }else {
 						  JSONObject regist=new JSONObject();
 						     try {
-						    	 regist.put("username",username);
-								regist.put("userid",userid);
-								regist.put("password", pass);
+						    	 regist.put("name",username);
+
+						    	 regist.put("id", registmd5);
+
 								regist.put("email", email);
 								regist.put("birthday", birthday);
 								regist.put("sex",sex1);
-//							    registinfo=new JSONObject();
-//								 registinfo.put("register", regist);
+		
 								 Toast.makeText(RegistModel.this,regist.toString(), Toast.LENGTH_LONG).show();
-								 new LoginThread(RegistModel.this,regist,url).show();
+								 new RegistThread(RegistModel.this,regist,url,TAG).show();
 							} catch (JSONException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();

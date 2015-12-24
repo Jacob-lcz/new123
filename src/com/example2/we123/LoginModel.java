@@ -47,7 +47,8 @@ public class LoginModel extends Activity {
 	private int day;
 	private Calendar cal;
 	private JSONObject json;
-	 private String url="http://loginonother.sinaapp.com/index.php/api/info/login/.json";
+	public String TAG="login";
+	 private String url="http://loginonother.sinaapp.com/api/Customers/";
 
 //	 点击文字第三方注册
 //	private TextView regist1;
@@ -142,26 +143,12 @@ public class LoginModel extends Activity {
 		
 		String name =et1.getText().toString().trim();
 		String password=et2.getText().toString().trim();
+	   String lmd5="id:"+name+"pwd:"+password;
+	   String loginInfo=new MD5(lmd5).md5(lmd5);
+	   Toast.makeText(this, loginInfo, 1).show();
 	
-//	构造json及登陆
-		JSONObject map = new JSONObject();
-		try {
-			map.put("userid",name);
-			map.put("password",password );
-		} catch (JSONException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-		
-//	 json= new JSONObject();
-//		try {
-//			json.put("login", map);
-//		} catch (JSONException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//		}
-//		Toast.makeText(LoginModel.this, "发出去的json"+json.toString(), Toast.LENGTH_SHORT).show();
-	     new LoginThread(LoginModel.this,map,url).show();
+
+	     new LoginThread(LoginModel.this,loginInfo,url,TAG).show();
 	       
 
 
