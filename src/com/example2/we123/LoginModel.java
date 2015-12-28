@@ -67,6 +67,8 @@ public class LoginModel extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 	  
 		super.onCreate(savedInstanceState);
+		AppClose appState = (AppClose)this.getApplication();  
+        appState.addActivity(this); 
 		setContentView(R.layout.login);
 //		为变量找到对应的R文件
 //		 点击文字第三方注册
@@ -126,7 +128,7 @@ public class LoginModel extends Activity {
 			String password=pref.getString("password", "");
 			et1.setText(name);
 			et2.setText(password);
-			
+			cb.setChecked(true);
 		}
 		
 		}

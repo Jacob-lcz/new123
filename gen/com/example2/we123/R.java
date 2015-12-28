@@ -2128,7 +2128,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f09003e;
         public static final int action_mode_bar_stub=0x7f09003d;
         public static final int action_mode_close_button=0x7f090023;
-        public static final int action_settings=0x7f0900b9;
+        public static final int action_settings=0x7f0900bd;
         public static final int activity_chooser_view_content=0x7f090024;
         public static final int alertTitle=0x7f090030;
         public static final int always=0x7f090019;
@@ -2150,6 +2150,7 @@ containing a value of this type.
         public static final int createtime=0x7f090074;
         public static final int custom=0x7f090037;
         public static final int customPanel=0x7f090036;
+        public static final int date=0x7f0900bb;
         public static final int decor_content_parent=0x7f09003f;
         public static final int default_activity_button=0x7f090027;
         public static final int disableHome=0x7f09000d;
@@ -2157,6 +2158,7 @@ containing a value of this type.
         public static final int email=0x7f090071;
         public static final int end=0x7f09001f;
         public static final int end_padder=0x7f090061;
+        public static final int exit=0x7f0900ba;
         public static final int expand_activities_button=0x7f090025;
         public static final int expanded_menu=0x7f090038;
         public static final int header=0x7f090094;
@@ -2167,12 +2169,14 @@ containing a value of this type.
         public static final int image=0x7f090026;
         public static final int img=0x7f09006e;
         public static final int info=0x7f090060;
+        public static final int jdate=0x7f0900bc;
         public static final int lastlogintime=0x7f090072;
         public static final int line1=0x7f09005a;
         public static final int line3=0x7f09005e;
         public static final int listMode=0x7f09000a;
         public static final int listView=0x7f090086;
         public static final int list_item=0x7f090028;
+        public static final int listview=0x7f0900b9;
         public static final int login=0x7f090064;
         public static final int media_actions=0x7f090058;
         public static final int middle=0x7f090020;
@@ -2397,6 +2401,8 @@ containing a value of this type.
         public static final int umeng_socialize_shareboard_item=0x7f03003a;
         public static final int umeng_socialize_simple_spinner_item=0x7f03003b;
         public static final int umeng_socialize_titile_bar=0x7f03003c;
+        public static final int userinfolist=0x7f03003d;
+        public static final int userlistitem=0x7f03003e;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;

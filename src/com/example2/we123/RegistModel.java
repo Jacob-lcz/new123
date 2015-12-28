@@ -46,6 +46,8 @@ String sex;
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		AppClose appState = (AppClose)this.getApplication();  
+        appState.addActivity(this); 
 		setContentView(R.layout.regist);
 		RG=(RadioGroup) findViewById(R.id.RG);
 	cal=Calendar.getInstance();
@@ -130,7 +132,7 @@ String sex;
 						  JSONObject regist=new JSONObject();
 						     try {
 						    	 regist.put("name",username);
-
+                                  regist.put("userid",userid);
 						    	 regist.put("id", registmd5);
 
 								regist.put("email", email);
