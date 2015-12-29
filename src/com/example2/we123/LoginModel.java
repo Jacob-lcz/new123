@@ -59,7 +59,8 @@ public class LoginModel extends Activity {
 	private Button button1;
 	private EditText et1;
 	private EditText et2;
-	private CheckBox cb;
+	private TextView tview;
+//	private CheckBox cb;
 	private SharedPreferences pref;
 	private Editor editor;
 	public String code;
@@ -70,6 +71,9 @@ public class LoginModel extends Activity {
 		AppClose appState = (AppClose)this.getApplication();  
         appState.addActivity(this); 
 		setContentView(R.layout.login);
+		tview=(TextView) findViewById(R.id.forgetpwd);
+		tview.setClickable(true);
+		tview.setFocusable(true);
 //		为变量找到对应的R文件
 //		 点击文字第三方注册
 //		regist1=(TextView) findViewById(R.id.regist);
@@ -82,10 +86,20 @@ public class LoginModel extends Activity {
 		btn=(ImageButton) findViewById(R.id.btn);
 	    Controller = UMServiceFactory.getUMSocialService("com.umeng.login");
 	    button =(Button) findViewById(R.id.button);
-//		button1 =(Button) findViewById(R.id.button1);
+
 		et1=(EditText) findViewById(R.id.name);
 		et2=(EditText) findViewById(R.id.password);
-		cb=(CheckBox) findViewById(R.id.cb);
+		
+		tview.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent=new Intent(LoginModel.this,resetActivity.class);
+				startActivity(intent);
+			}
+		});
+//		cb=(CheckBox) findViewById(R.id.cb);
 		
 //		regist1.setOnClickListener(new OnClickListener() {
 //			
@@ -103,40 +117,40 @@ public class LoginModel extends Activity {
 //			}
 //		});
 //		  创建Pref对象命名并取得Edit对象
-		pref=getSharedPreferences("mylogin", MODE_PRIVATE);
-		editor=pref.edit();
-//		判断是否勾选checkBox并决定是否在edittext里面写入用户名密码
-	Boolean ischeck=pref.getBoolean("ischecked", false);
-	if(ischeck){
-	if(pref.getInt("year",0)!=0){
-		if(pref.getInt("year",0)-year!=0){
-//			重新授权
-			cb.setChecked(true);
-			et1.setText("");
-			et2.setText("");
-		Toast.makeText(LoginModel.this, "授权过期，请重新输入用户名密码", Toast.LENGTH_LONG).show();
-		
-		}else {
-			if((month-pref.getInt("month", 0))>=1){
-				cb.setChecked(true);
-				et1.setText("");
-				et2.setText("");
-				Toast.makeText(LoginModel.this, "授权过期，请重新输入用户名密码", Toast.LENGTH_LONG).show();
-				
-		}else{
-			String name=pref.getString("userid", "");
-			String password=pref.getString("password", "");
-			et1.setText(name);
-			et2.setText(password);
-			cb.setChecked(true);
-		}
-		
-		}
-		
-		
-	}
-	}
-	   
+//		pref=getSharedPreferences("mylogin", MODE_PRIVATE);
+//		editor=pref.edit();
+////		判断是否勾选checkBox并决定是否在edittext里面写入用户名密码
+//	Boolean ischeck=pref.getBoolean("ischecked", false);
+//	if(ischeck){
+//	if(pref.getInt("year",0)!=0){
+//		if(pref.getInt("year",0)-year!=0){
+////			重新授权
+//			cb.setChecked(true);
+//			et1.setText("");
+//			et2.setText("");
+//		Toast.makeText(LoginModel.this, "授权过期，请重新输入用户名密码", Toast.LENGTH_LONG).show();
+//		
+//		}else {
+//			if((month-pref.getInt("month", 0))>=1){
+//				cb.setChecked(true);
+//				et1.setText("");
+//				et2.setText("");
+//				Toast.makeText(LoginModel.this, "授权过期，请重新输入用户名密码", Toast.LENGTH_LONG).show();
+//				
+//		}else{
+//			String name=pref.getString("userid", "");
+//			String password=pref.getString("password", "");
+//			et1.setText(name);
+//			et2.setText(password);
+//			cb.setChecked(true);
+//		}
+//		
+//		}
+//		
+//		
+//	}
+//	}
+//	   
 	}
 //设定按钮点击事件
 	public void click(View view){
@@ -147,7 +161,7 @@ public class LoginModel extends Activity {
 		String password=et2.getText().toString().trim();
 	   String lmd5="id:"+name+"pwd:"+password;
 	   String loginInfo=new MD5(lmd5).md5(lmd5);
-	   Toast.makeText(this, loginInfo, 1).show();
+	
 	
 
 	     new LoginThread(LoginModel.this,loginInfo,url,TAG).show();
@@ -156,24 +170,24 @@ public class LoginModel extends Activity {
 
 
 
-		if(cb.isChecked()){
-			editor.putInt("year",year);
-			editor.putInt("month",month);
-			editor.putInt("day",day);
-			editor.putBoolean("ischecked", true);
-			editor.putString("userid", name);
-			editor.putString("password", password);
-			editor.commit();
-}else {
-	        editor.putInt("year",0);
-	        editor.putInt("month",0);
-	        editor.putInt("day",0);
-			editor.putBoolean("ischecked",false);
-		    editor.remove(name);
-		     editor.remove(password);
-		    editor.commit();
-			
-		}
+//		if(cb.isChecked()){
+//			editor.putInt("year",year);
+//			editor.putInt("month",month);
+//			editor.putInt("day",day);
+//			editor.putBoolean("ischecked", true);
+//			editor.putString("userid", name);
+//			editor.putString("password", password);
+//			editor.commit();
+//}else {
+//	        editor.putInt("year",0);
+//	        editor.putInt("month",0);
+//	        editor.putInt("day",0);
+//			editor.putBoolean("ischecked",false);
+//		    editor.remove(name);
+//		     editor.remove(password);
+//		    editor.commit();
+//			
+//		}
 		
 	break;
 
@@ -185,7 +199,12 @@ public class LoginModel extends Activity {
 	break;	}
 }
 
-
+	@Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+		finish();
+	}
 
 
 }

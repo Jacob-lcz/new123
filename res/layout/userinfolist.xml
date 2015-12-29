@@ -16,7 +16,7 @@
        android:layout_marginTop="40dp"
        android:id="@+id/listview"
        android:layout_width="wrap_content"
-       android:layout_height="334dp" 
+       android:layout_height="250dp" 
          android:divider="@color/umeng_socialize_divider"  
     android:dividerHeight="1px">
 </ListView>
@@ -34,6 +34,21 @@
       
       />
 
+     
+         <Button 
+                android:id="@+id/backtologin"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:onClick="click"
+                  android:layout_marginLeft="40dp"
+                  android:layout_marginRight="40dp"
+                  android:layout_marginTop="20dp"
+                  android:text="注销"
+                 
+                  android:textSize="20sp"
+                  android:background="#EE9A00" 
+                  android:textColor="#FFFFFF"
+         />
      <Button 
         android:id="@+id/exit"
                   android:layout_width="match_parent"
@@ -46,5 +61,7 @@
                   android:textSize="20sp"
                   android:background="#EE9A00" 
                   android:textColor="#FFFFFF"
+                  
          />
+   
 </LinearLayout>

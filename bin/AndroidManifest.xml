@@ -27,15 +27,28 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" 
         >
-           <activity
-            android:name="com.example2.we123.MainActivity"
-            android:label="MainActivity"
-            android:theme="@android:style/Theme.Black.NoTitleBar" >
+        
+        <activity
+            android:name=".firstActChoose"
+            android:label="Login"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+           <activity
+            android:name="com.example2.we123.MainActivity"
+            android:label="MainActivity"
+           >
+        
+        </activity>
+          <activity
+            android:name=".resetActivity"
+            android:label="MainActivity"
+           >
+        
         </activity>
          <activity
              
@@ -60,7 +73,8 @@
         <activity
             android:name=".LoginModel"
             android:label="@string/app_name" 
-            android:windowSoftInputMode="stateHidden|adjustResize">
+            
+            >
             
         </activity>
           <meta-data
