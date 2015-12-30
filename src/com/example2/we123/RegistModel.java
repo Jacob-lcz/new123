@@ -139,7 +139,7 @@ String sex;
 								regist.put("birthday", birthday);
 								regist.put("sex",sex1);
 		
-								 Toast.makeText(RegistModel.this,regist.toString(), Toast.LENGTH_LONG).show();
+//								 Toast.makeText(RegistModel.this,regist.toString(), Toast.LENGTH_LONG).show();
 								 new RegistThread(RegistModel.this,regist,url,TAG).show();
 							} catch (JSONException e) {
 								// TODO Auto-generated catch block

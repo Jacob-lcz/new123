@@ -2138,7 +2138,7 @@ containing a value of this type.
         public static final int birth=0x7f09006d;
         public static final int bt=0x7f090066;
         public static final int btn=0x7f090057;
-        public static final int button=0x7f090053;
+        public static final int button=0x7f090052;
         public static final int buttonPanel=0x7f09002b;
         public static final int cancel_action=0x7f090059;
         public static final int cbman=0x7f09006f;
@@ -2161,7 +2161,7 @@ containing a value of this type.
         public static final int expand_activities_button=0x7f090025;
         public static final int expanded_menu=0x7f090038;
         public static final int first=0x7f090050;
-        public static final int forgetpwd=0x7f090056;
+        public static final int forgetpwd=0x7f090055;
         public static final int header=0x7f090090;
         public static final int home=0x7f090000;
         public static final int homeAsUp=0x7f09000e;
@@ -2182,13 +2182,13 @@ containing a value of this type.
         public static final int media_actions=0x7f09005b;
         public static final int middle=0x7f090020;
         public static final int multiply=0x7f090014;
-        public static final int myemail=0x7f090052;
-        public static final int name=0x7f090054;
+        public static final int myemail=0x7f090051;
+        public static final int name=0x7f090053;
         public static final int never=0x7f09001c;
         public static final int none=0x7f09000f;
         public static final int normal=0x7f09000b;
         public static final int parentPanel=0x7f09002d;
-        public static final int password=0x7f090055;
+        public static final int password=0x7f090054;
         public static final int progress_bar_parent=0x7f09009b;
         public static final int progress_circular=0x7f090007;
         public static final int progress_horizontal=0x7f090008;
@@ -2197,7 +2197,7 @@ containing a value of this type.
         public static final int registmail=0x7f09006c;
         public static final int registname=0x7f09006a;
         public static final int registpass=0x7f09006b;
-        public static final int resetname=0x7f090051;
+        public static final int registtouser=0x7f090056;
         public static final int screen=0x7f090015;
         public static final int scrollIndicatorDown=0x7f090035;
         public static final int scrollIndicatorUp=0x7f090032;

@@ -59,7 +59,7 @@ public class LoginModel extends Activity {
 	private Button button1;
 	private EditText et1;
 	private EditText et2;
-	private TextView tview;
+	private TextView forget,registuser;
 //	private CheckBox cb;
 	private SharedPreferences pref;
 	private Editor editor;
@@ -71,9 +71,12 @@ public class LoginModel extends Activity {
 		AppClose appState = (AppClose)this.getApplication();  
         appState.addActivity(this); 
 		setContentView(R.layout.login);
-		tview=(TextView) findViewById(R.id.forgetpwd);
-		tview.setClickable(true);
-		tview.setFocusable(true);
+		forget=(TextView) findViewById(R.id.forgetpwd);
+		forget.setClickable(true);
+		forget.setFocusable(true);
+		registuser=(TextView) findViewById(R.id.registtouser);
+		registuser.setClickable(true);
+		registuser.setFocusable(true);
 //		为变量找到对应的R文件
 //		 点击文字第三方注册
 //		regist1=(TextView) findViewById(R.id.regist);
@@ -89,13 +92,21 @@ public class LoginModel extends Activity {
 
 		et1=(EditText) findViewById(R.id.name);
 		et2=(EditText) findViewById(R.id.password);
-		
-		tview.setOnClickListener(new OnClickListener() {
+		registuser.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				// TODO Auto-generated method stub
-				Intent intent=new Intent(LoginModel.this,resetActivity.class);
+				Intent intent=new Intent(LoginModel.this,RegistModel.class);
+				startActivity(intent);
+			}
+		});
+		forget.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				// TODO Auto-generated method stub
+				Intent intent=new Intent(LoginModel.this,resetPwd.class);
 				startActivity(intent);
 			}
 		});

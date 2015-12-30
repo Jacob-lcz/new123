@@ -575,7 +575,7 @@ int id beginning 0x7f09001e
 int id birth 0x7f09006d
 int id bt 0x7f090066
 int id btn 0x7f090057
-int id button 0x7f090053
+int id button 0x7f090052
 int id buttonPanel 0x7f09002b
 int id cancel_action 0x7f090059
 int id cbman 0x7f09006f
@@ -598,7 +598,7 @@ int id exit 0x7f0900ba
 int id expand_activities_button 0x7f090025
 int id expanded_menu 0x7f090038
 int id first 0x7f090050
-int id forgetpwd 0x7f090056
+int id forgetpwd 0x7f090055
 int id header 0x7f090090
 int id home 0x7f090000
 int id homeAsUp 0x7f09000e
@@ -619,13 +619,13 @@ int id login 0x7f090067
 int id media_actions 0x7f09005b
 int id middle 0x7f090020
 int id multiply 0x7f090014
-int id myemail 0x7f090052
-int id name 0x7f090054
+int id myemail 0x7f090051
+int id name 0x7f090053
 int id never 0x7f09001c
 int id none 0x7f09000f
 int id normal 0x7f09000b
 int id parentPanel 0x7f09002d
-int id password 0x7f090055
+int id password 0x7f090054
 int id progress_bar_parent 0x7f09009b
 int id progress_circular 0x7f090007
 int id progress_horizontal 0x7f090008
@@ -634,7 +634,7 @@ int id regist 0x7f090068
 int id registmail 0x7f09006c
 int id registname 0x7f09006a
 int id registpass 0x7f09006b
-int id resetname 0x7f090051
+int id registtouser 0x7f090056
 int id screen 0x7f090015
 int id scrollIndicatorDown 0x7f090035
 int id scrollIndicatorUp 0x7f090032

@@ -45,11 +45,12 @@
         
         </activity>
           <activity
-            android:name=".resetActivity"
+            android:name=".resetPwd"
             android:label="MainActivity"
            >
         
         </activity>
+      
          <activity
              
             android:name=".info"

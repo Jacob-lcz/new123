@@ -5,7 +5,7 @@
     android:orientation="vertical" >
     
 
-       <TextView
+ <!--       <TextView
            
              android:layout_marginTop="20dp"
         android:layout_width="wrap_content"
@@ -17,7 +17,7 @@
           android:layout_width="match_parent"
           android:layout_height="wrap_content"
         android:singleLine="true"
-        />
+        /> -->
        <TextView
            
              android:layout_marginTop="20dp"
@@ -40,7 +40,7 @@
                   android:layout_marginLeft="40dp"
                   android:layout_marginRight="40dp"
                   android:layout_marginTop="20dp"
-                  android:text="提交"
+                  android:text="提交信息"
                   android:textSize="20sp"
                   android:background="#EE9A00" 
                   android:textColor="#FFFFFF"
