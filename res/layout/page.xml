@@ -18,16 +18,19 @@
      android:layout_width="match_parent"
      android:layout_height="wrap_content"
      android:layout_alignParentBottom="true"
-     android:layout_alignParentRight="true"
+
      android:orientation="horizontal" >
 
      <Button
          android:onClick="click"
          android:layout_weight="1"
          android:id="@+id/login"
-         android:layout_width="120dp"
+         android:layout_width="0dp"
+         android:layout_marginRight="5dp"
          android:layout_height="wrap_content"
          android:layout_marginBottom="40dp"
+           android:background="#2d7af0" 
+                  android:textColor="#FFFFFF"
          android:layout_marginLeft="20dp"
          android:text="现有用户" />
 
@@ -35,9 +38,12 @@
          android:onClick="click"
          android:layout_weight="1"
          android:id="@+id/regist"
-         android:layout_width="120dp"
+         android:layout_width="0dp"
          android:layout_height="wrap_content"
          android:layout_marginBottom="40dp"
+         android:layout_marginLeft="5dp"
+           android:background="#2d7af0" 
+                  android:textColor="#FFFFFF"
          android:layout_marginRight="20dp"
          android:singleLine="true"
          android:text="现在加入" />
