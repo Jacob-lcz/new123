@@ -44,6 +44,12 @@
            >
         
         </activity>
+            <activity
+            android:name=".infoChange1"
+            android:label="修改用户信息"
+           >
+        
+        </activity>
           <activity
             android:name=".resetPwd"
             android:label="MainActivity"

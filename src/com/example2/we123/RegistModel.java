@@ -141,6 +141,9 @@ String sex;
 		
 //								 Toast.makeText(RegistModel.this,regist.toString(), Toast.LENGTH_LONG).show();
 								 new RegistThread(RegistModel.this,regist,url,TAG).show();
+//						String url="http://loginonother.sinaapp.com/api/Customers/"+registmd5;
+			
+//								 new UpdateThread(RegistModel.this,regist,url,TAG).show();
 							} catch (JSONException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
@@ -172,6 +175,7 @@ String sex;
 			
 		}, year, month,day).show();
 	
+		
 	}
 
 	
@@ -187,4 +191,11 @@ String sex;
         boolean result = Pattern.matches(emailPattern, email);  
         return result;
 }
+	@Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+		super.onStop();
+		finish();
+	}
+
 }
