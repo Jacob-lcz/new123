@@ -107,7 +107,7 @@ public class LoginModel extends Activity {
 		
 		String name =et1.getText().toString().trim();
 		String password=et2.getText().toString().trim();
-	   String lmd5="id:"+name+"pwd:"+password;
+	   String lmd5="email:"+name+"pwd:"+password;
 	   String loginInfo=new MD5(lmd5).md5(lmd5);
 	
 	

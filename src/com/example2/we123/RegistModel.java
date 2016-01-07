@@ -28,7 +28,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 public class RegistModel extends Activity {
-private EditText registname,registpass,registmail,birth,name;
+private EditText registpass,registmail,birth,name;
 private Button btn;
 private RadioGroup RG;
 private int year;
@@ -56,7 +56,7 @@ String sex;
 	day=cal.get(Calendar.DAY_OF_MONTH);
 		btn=(Button) findViewById(R.id.btn);
 		name=(EditText) findViewById(R.id.name);
-		registname=(EditText) findViewById(R.id.registname);
+//		registname=(EditText) findViewById(R.id.registname);
 		registpass=(EditText) findViewById(R.id.registpass);
 		registmail=(EditText) findViewById(R.id.registmail);
 		birth=(EditText) findViewById(R.id.birth);
@@ -96,24 +96,25 @@ String sex;
 			
 			@Override
 			public void onClick(View v) {
-				
+				final	String email=registmail.getText().toString().trim();
+
+				String birthday=birth.getText().toString().trim();
+				String  username =name.getText().toString().trim();
 				 String sex1=sex;
 				// TODO Auto-generated method stub
 //				 构造生成注册MD5（账号加密码）
-				String userid=registname.getText().toString().trim();
+//				String userid=registname.getText().toString().trim();
 				String pass=registpass.getText().toString().trim();
-				 String lmd5="id:"+userid+"pwd:"+pass;
+				 String lmd5="email:"+email+"pwd:"+pass;
 				   String registmd5=new MD5(lmd5).md5(lmd5);
 				   
-			final	String email=registmail.getText().toString().trim();
-				String birthday=birth.getText().toString().trim();
-				String  username =name.getText().toString().trim();
+		
 				if (username.equals("") ) {
 					 Toast.makeText(RegistModel.this, "昵称不能为空", Toast.LENGTH_SHORT)
 					 .show();
-					 } else if(userid.length() < 4 || userid.length() > 20){ 
-						 Toast.makeText(RegistModel.this, "账号长度应在4～20位！", Toast.LENGTH_SHORT)
-						 .show();
+//					 } else if(userid.length() < 4 || userid.length() > 20){ 
+//						 Toast.makeText(RegistModel.this, "账号长度应在4～20位！", Toast.LENGTH_SHORT)
+//						 .show();
 					 
 			 } else if (pass.length() < 6 || pass.length() > 15) { 
 				 Toast.makeText(RegistModel.this, "密码长度应在6～15位！", Toast.LENGTH_SHORT)
@@ -132,7 +133,7 @@ String sex;
 						  JSONObject regist=new JSONObject();
 						     try {
 						    	 regist.put("name",username);
-                                  regist.put("userid",userid);
+//                                  regist.put("userid",userid);
 						    	 regist.put("id", registmd5);
 
 								regist.put("email", email);
