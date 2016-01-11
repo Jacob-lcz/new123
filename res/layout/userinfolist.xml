@@ -7,11 +7,18 @@
     <ImageView 
       android:layout_gravity="center"
            android:id="@+id/img"
-         android:layout_width="60dp"
-        android:layout_height="60dp"
+         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:src="@drawable/ic_launcher"
         />
-    
+      <TextView 
+          android:gravity="center"
+       android:id="@+id/email" 
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" 
+    android:layout_marginBottom="10dp"
+      
+      />
    <ListView
        android:layout_marginTop="40dp"
        android:id="@+id/listview"
@@ -55,25 +62,25 @@
                   android:layout_marginLeft="40dp"
                   android:layout_marginRight="40dp"
                   android:layout_marginTop="20dp"
-                  android:text="切换用户"
+                  android:text="登出"
                  
                   android:textSize="20sp"
                   android:background="#EE9A00" 
                   android:textColor="#FFFFFF"
          />
-     <Button 
-        android:id="@+id/exit"
+    <Button 
+                android:id="@+id/back"
                   android:layout_width="match_parent"
                   android:layout_height="wrap_content"
                   android:onClick="click"
                   android:layout_marginLeft="40dp"
                   android:layout_marginRight="40dp"
                   android:layout_marginTop="20dp"
-                  android:text="退出程序"
+                  android:text="返回上一页"
+                 
                   android:textSize="20sp"
                   android:background="#EE9A00" 
                   android:textColor="#FFFFFF"
-                  
          />
-   
+    
 </LinearLayout>

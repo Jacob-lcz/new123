@@ -16,14 +16,21 @@
         />
 
      <TextView
-          android:layout_alignParentRight="true"
+          
          android:id="@+id/jdate"
      android:layout_height="60dp"
     android:layout_width="wrap_content"
        android:textSize="13sp"
        android:paddingTop="25dp"
     
-       android:paddingRight="10dp"
+       android:layout_marginLeft="120dp"
        />
-
+<ImageView 
+    android:layout_centerInParent="true"
+    android:layout_alignParentRight="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginRight="10dp"
+    android:src="@drawable/ic_navigate"
+    />
 </RelativeLayout>
