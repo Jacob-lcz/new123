@@ -24,7 +24,7 @@
          <RelativeLayout
        android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="#2e56ef"
+        android:background="#0c141d"
        >    
        <com.example2.we123.CircleImageView
             
