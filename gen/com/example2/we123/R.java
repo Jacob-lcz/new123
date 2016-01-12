@@ -2184,7 +2184,7 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f09003e;
         public static final int action_mode_bar_stub=0x7f09003d;
         public static final int action_mode_close_button=0x7f090023;
-        public static final int action_websearch=0x7f0900cf;
+        public static final int action_websearch=0x7f0900d2;
         public static final int activity_chooser_view_content=0x7f090024;
         public static final int alertTitle=0x7f090030;
         public static final int always=0x7f090019;
@@ -2258,6 +2258,9 @@ containing a value of this type.
         public static final int never=0x7f09001c;
         public static final int none=0x7f09000f;
         public static final int normal=0x7f09000b;
+        public static final int notebtn=0x7f0900d1;
+        public static final int noteedit=0x7f0900cf;
+        public static final int notetext=0x7f0900d0;
         public static final int parentPanel=0x7f09002d;
         public static final int password=0x7f090065;
         public static final int progress_bar_parent=0x7f0900ac;
@@ -2482,6 +2485,7 @@ containing a value of this type.
         public static final int umeng_socialize_titile_bar=0x7f030041;
         public static final int userinfolist=0x7f030042;
         public static final int userlistitem=0x7f030043;
+        public static final int yunnote=0x7f030044;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;
