@@ -22,19 +22,25 @@
        >
        
          <RelativeLayout
-       android:layout_width="wrap_content"
+       android:layout_width="match_parent"
         android:layout_height="120dp"
-        android:background="@drawable/bac1"
+        android:background="#2e56ef"
        >    
-       <ImageView   
+       <com.example2.we123.CircleImageView
             
            android:src="@drawable/ic_launcher"          
            android:id="@+id/mypic"
            
              android:layout_centerInParent="true"
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"         
+              android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_margin="5px"       
            />
+       <!-- <com.example2.we123.CircleImageView
+        android:id="@+id/img_round"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_margin="5px"/> -->
        <TextView 
            android:id="@+id/myname"
              android:layout_centerInParent="true"

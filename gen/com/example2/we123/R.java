@@ -437,6 +437,42 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
          */
         public static final int checkedTextViewStyle=0x7f010068;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int civ_border_color=0x7f0100cf;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int civ_border_overlay=0x7f0100d0;
+        /** <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int civ_border_width=0x7f0100ce;
+        /** <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int civ_fill_color=0x7f0100d1;
         /**  Close button icon 
          <p>Must be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
@@ -2148,7 +2184,6 @@ containing a value of this type.
         public static final int action_mode_bar=0x7f09003e;
         public static final int action_mode_bar_stub=0x7f09003d;
         public static final int action_mode_close_button=0x7f090023;
-        public static final int action_settings=0x7f0900cf;
         public static final int activity_chooser_view_content=0x7f090024;
         public static final int alertTitle=0x7f090030;
         public static final int always=0x7f090019;
@@ -2166,7 +2201,6 @@ containing a value of this type.
         public static final int cbman=0x7f090080;
         public static final int cbwoman=0x7f090081;
         public static final int cemail=0x7f09005d;
-        public static final int change=0x7f0900c8;
         public static final int checkbox=0x7f090039;
         public static final int chman=0x7f090060;
         public static final int chronometer=0x7f090072;
@@ -2184,7 +2218,7 @@ containing a value of this type.
         public static final int disableHome=0x7f09000d;
         public static final int drawer_layout=0x7f090050;
         public static final int edit_query=0x7f090043;
-        public static final int email=0x7f0900c6;
+        public static final int email=0x7f0900c7;
         public static final int end=0x7f09001f;
         public static final int end_padder=0x7f090076;
         public static final int exit=0x7f090057;
@@ -2209,11 +2243,12 @@ containing a value of this type.
         public static final int listMode=0x7f09000a;
         public static final int listView=0x7f090093;
         public static final int list_item=0x7f090028;
-        public static final int listview=0x7f0900c7;
+        public static final int listview=0x7f0900c8;
         public static final int login=0x7f090079;
         public static final int mapview=0x7f090051;
         public static final int media_actions=0x7f09006e;
         public static final int middle=0x7f090020;
+        public static final int mimg=0x7f0900c6;
         public static final int multiply=0x7f090014;
         public static final int myemail=0x7f090059;
         public static final int myname=0x7f090054;
@@ -2517,12 +2552,16 @@ containing a value of this type.
          */
         public static final int abc_toolbar_collapse_description=0x7f0a0004;
         public static final int action_settings=0x7f0a0016;
+        public static final int action_websearch=0x7f0a0019;
         public static final int app_name=0x7f0a0014;
+        public static final int app_not_available=0x7f0a001a;
+        public static final int drawer_close=0x7f0a0018;
+        public static final int drawer_open=0x7f0a0017;
         public static final int hello_world=0x7f0a0015;
-        public static final int pull_to_refresh_pull_label=0x7f0a0017;
-        public static final int pull_to_refresh_refreshing_label=0x7f0a0019;
-        public static final int pull_to_refresh_release_label=0x7f0a0018;
-        public static final int pull_to_refresh_tap_label=0x7f0a001a;
+        public static final int pull_to_refresh_pull_label=0x7f0a001b;
+        public static final int pull_to_refresh_refreshing_label=0x7f0a001d;
+        public static final int pull_to_refresh_release_label=0x7f0a001c;
+        public static final int pull_to_refresh_tap_label=0x7f0a001e;
         /**  Text to use when the number in a notification info is too large
          (greater than status_bar_notification_info_maxnum, defined in
          values/config.xml) and must be truncated. May need to be localized
@@ -2530,63 +2569,63 @@ containing a value of this type.
          [CHAR LIMIT=4] 
          */
         public static final int status_bar_notification_info_overflow=0x7f0a0011;
-        public static final int umeng_example_home_btn_plus=0x7f0a004b;
-        public static final int umeng_socialize_back=0x7f0a001e;
-        public static final int umeng_socialize_cancel_btn_str=0x7f0a004e;
-        public static final int umeng_socialize_comment=0x7f0a001c;
-        public static final int umeng_socialize_comment_detail=0x7f0a001d;
-        public static final int umeng_socialize_content_hint=0x7f0a004d;
-        public static final int umeng_socialize_friends=0x7f0a0020;
-        public static final int umeng_socialize_img_des=0x7f0a0050;
-        public static final int umeng_socialize_login=0x7f0a002b;
-        public static final int umeng_socialize_login_qq=0x7f0a002a;
-        public static final int umeng_socialize_msg_hor=0x7f0a0026;
-        public static final int umeng_socialize_msg_min=0x7f0a0025;
-        public static final int umeng_socialize_msg_sec=0x7f0a0024;
-        public static final int umeng_socialize_near_At=0x7f0a001f;
-        public static final int umeng_socialize_network_break_alert=0x7f0a001b;
-        public static final int umeng_socialize_send=0x7f0a0021;
-        public static final int umeng_socialize_send_btn_str=0x7f0a004f;
-        public static final int umeng_socialize_share=0x7f0a0051;
-        public static final int umeng_socialize_share_content=0x7f0a0029;
-        public static final int umeng_socialize_text_add_custom_platform=0x7f0a004a;
-        public static final int umeng_socialize_text_authorize=0x7f0a002d;
-        public static final int umeng_socialize_text_choose_account=0x7f0a002c;
-        public static final int umeng_socialize_text_comment_hint=0x7f0a0031;
-        public static final int umeng_socialize_text_douban_key=0x7f0a0047;
-        public static final int umeng_socialize_text_friend_list=0x7f0a0032;
-        public static final int umeng_socialize_text_loading_message=0x7f0a0041;
-        public static final int umeng_socialize_text_login_fail=0x7f0a0030;
-        public static final int umeng_socialize_text_qq_key=0x7f0a0044;
-        public static final int umeng_socialize_text_qq_zone_key=0x7f0a0045;
-        public static final int umeng_socialize_text_renren_key=0x7f0a0046;
-        public static final int umeng_socialize_text_sina_key=0x7f0a0043;
+        public static final int umeng_example_home_btn_plus=0x7f0a004f;
+        public static final int umeng_socialize_back=0x7f0a0022;
+        public static final int umeng_socialize_cancel_btn_str=0x7f0a0052;
+        public static final int umeng_socialize_comment=0x7f0a0020;
+        public static final int umeng_socialize_comment_detail=0x7f0a0021;
+        public static final int umeng_socialize_content_hint=0x7f0a0051;
+        public static final int umeng_socialize_friends=0x7f0a0024;
+        public static final int umeng_socialize_img_des=0x7f0a0054;
+        public static final int umeng_socialize_login=0x7f0a002f;
+        public static final int umeng_socialize_login_qq=0x7f0a002e;
+        public static final int umeng_socialize_msg_hor=0x7f0a002a;
+        public static final int umeng_socialize_msg_min=0x7f0a0029;
+        public static final int umeng_socialize_msg_sec=0x7f0a0028;
+        public static final int umeng_socialize_near_At=0x7f0a0023;
+        public static final int umeng_socialize_network_break_alert=0x7f0a001f;
+        public static final int umeng_socialize_send=0x7f0a0025;
+        public static final int umeng_socialize_send_btn_str=0x7f0a0053;
+        public static final int umeng_socialize_share=0x7f0a0055;
+        public static final int umeng_socialize_share_content=0x7f0a002d;
+        public static final int umeng_socialize_text_add_custom_platform=0x7f0a004e;
+        public static final int umeng_socialize_text_authorize=0x7f0a0031;
+        public static final int umeng_socialize_text_choose_account=0x7f0a0030;
+        public static final int umeng_socialize_text_comment_hint=0x7f0a0035;
+        public static final int umeng_socialize_text_douban_key=0x7f0a004b;
+        public static final int umeng_socialize_text_friend_list=0x7f0a0036;
+        public static final int umeng_socialize_text_loading_message=0x7f0a0045;
+        public static final int umeng_socialize_text_login_fail=0x7f0a0034;
+        public static final int umeng_socialize_text_qq_key=0x7f0a0048;
+        public static final int umeng_socialize_text_qq_zone_key=0x7f0a0049;
+        public static final int umeng_socialize_text_renren_key=0x7f0a004a;
+        public static final int umeng_socialize_text_sina_key=0x7f0a0047;
         /**  平台名称 
          */
-        public static final int umeng_socialize_text_tencent_key=0x7f0a0042;
-        public static final int umeng_socialize_text_tencent_no_connection=0x7f0a0034;
-        public static final int umeng_socialize_text_tencent_no_install=0x7f0a0037;
-        public static final int umeng_socialize_text_tencent_oauth_login_fail=0x7f0a0035;
-        public static final int umeng_socialize_text_tencent_version_no_match=0x7f0a0036;
-        public static final int umeng_socialize_text_ucenter=0x7f0a002f;
-        public static final int umeng_socialize_text_unauthorize=0x7f0a002e;
-        public static final int umeng_socialize_text_visitor=0x7f0a0033;
-        public static final int umeng_socialize_text_waitting=0x7f0a0038;
-        public static final int umeng_socialize_text_waitting_message=0x7f0a0040;
-        public static final int umeng_socialize_text_waitting_qq=0x7f0a003d;
-        public static final int umeng_socialize_text_waitting_qzone=0x7f0a003e;
-        public static final int umeng_socialize_text_waitting_redirect=0x7f0a003f;
-        public static final int umeng_socialize_text_waitting_share=0x7f0a004c;
-        public static final int umeng_socialize_text_waitting_weixin=0x7f0a0039;
-        public static final int umeng_socialize_text_waitting_weixin_circle=0x7f0a003a;
-        public static final int umeng_socialize_text_waitting_yixin=0x7f0a003b;
-        public static final int umeng_socialize_text_waitting_yixin_circle=0x7f0a003c;
-        public static final int umeng_socialize_text_weixin_circle_key=0x7f0a0049;
-        public static final int umeng_socialize_text_weixin_key=0x7f0a0048;
-        public static final int umeng_socialize_tip_blacklist=0x7f0a0022;
-        public static final int umeng_socialize_tip_loginfailed=0x7f0a0023;
-        public static final int umeng_socialize_ucenter_login_title_guide=0x7f0a0027;
-        public static final int umeng_socialize_ucenter_login_title_platform=0x7f0a0028;
+        public static final int umeng_socialize_text_tencent_key=0x7f0a0046;
+        public static final int umeng_socialize_text_tencent_no_connection=0x7f0a0038;
+        public static final int umeng_socialize_text_tencent_no_install=0x7f0a003b;
+        public static final int umeng_socialize_text_tencent_oauth_login_fail=0x7f0a0039;
+        public static final int umeng_socialize_text_tencent_version_no_match=0x7f0a003a;
+        public static final int umeng_socialize_text_ucenter=0x7f0a0033;
+        public static final int umeng_socialize_text_unauthorize=0x7f0a0032;
+        public static final int umeng_socialize_text_visitor=0x7f0a0037;
+        public static final int umeng_socialize_text_waitting=0x7f0a003c;
+        public static final int umeng_socialize_text_waitting_message=0x7f0a0044;
+        public static final int umeng_socialize_text_waitting_qq=0x7f0a0041;
+        public static final int umeng_socialize_text_waitting_qzone=0x7f0a0042;
+        public static final int umeng_socialize_text_waitting_redirect=0x7f0a0043;
+        public static final int umeng_socialize_text_waitting_share=0x7f0a0050;
+        public static final int umeng_socialize_text_waitting_weixin=0x7f0a003d;
+        public static final int umeng_socialize_text_waitting_weixin_circle=0x7f0a003e;
+        public static final int umeng_socialize_text_waitting_yixin=0x7f0a003f;
+        public static final int umeng_socialize_text_waitting_yixin_circle=0x7f0a0040;
+        public static final int umeng_socialize_text_weixin_circle_key=0x7f0a004d;
+        public static final int umeng_socialize_text_weixin_key=0x7f0a004c;
+        public static final int umeng_socialize_tip_blacklist=0x7f0a0026;
+        public static final int umeng_socialize_tip_loginfailed=0x7f0a0027;
+        public static final int umeng_socialize_ucenter_login_title_guide=0x7f0a002b;
+        public static final int umeng_socialize_ucenter_login_title_platform=0x7f0a002c;
     }
     public static final class style {
         public static final int AlertDialog_AppCompat=0x7f0b0042;
@@ -3877,6 +3916,85 @@ containing a value of this type.
           @attr name com.example2.we123:allowStacking
         */
         public static final int ButtonBarLayout_allowStacking = 0;
+        /** Attributes that can be used with a CircleImageView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #CircleImageView_civ_border_color com.example2.we123:civ_border_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_civ_border_overlay com.example2.we123:civ_border_overlay}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_civ_border_width com.example2.we123:civ_border_width}</code></td><td></td></tr>
+           <tr><td><code>{@link #CircleImageView_civ_fill_color com.example2.we123:civ_fill_color}</code></td><td></td></tr>
+           </table>
+           @see #CircleImageView_civ_border_color
+           @see #CircleImageView_civ_border_overlay
+           @see #CircleImageView_civ_border_width
+           @see #CircleImageView_civ_fill_color
+         */
+        public static final int[] CircleImageView = {
+            0x7f0100ce, 0x7f0100cf, 0x7f0100d0, 0x7f0100d1
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example2.we123.R.attr#civ_border_color}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example2.we123:civ_border_color
+        */
+        public static final int CircleImageView_civ_border_color = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example2.we123.R.attr#civ_border_overlay}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example2.we123:civ_border_overlay
+        */
+        public static final int CircleImageView_civ_border_overlay = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.example2.we123.R.attr#civ_border_width}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example2.we123:civ_border_width
+        */
+        public static final int CircleImageView_civ_border_width = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example2.we123.R.attr#civ_fill_color}
+          attribute's value can be found in the {@link #CircleImageView} array.
+
+
+          <p>Must be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example2.we123:civ_fill_color
+        */
+        public static final int CircleImageView_civ_fill_color = 3;
         /** Attributes that can be used with a CompoundButton.
            <p>Includes the following attributes:</p>
            <table>

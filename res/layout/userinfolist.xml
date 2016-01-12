@@ -4,12 +4,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
     
-    <ImageView 
-      android:layout_gravity="center"
-           android:id="@+id/img"
-         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <com.example2.we123.CircleImageView
+     android:layout_gravity="center_horizontal"
+           android:id="@+id/mimg"
+           android:clickable="true"
+         android:layout_width="80dp"
+        android:layout_height="80dp"
         android:src="@drawable/ic_launcher"
+          android:layout_marginTop="32dp" 
         />
       <TextView 
           android:gravity="center"
@@ -27,7 +29,7 @@
          android:divider="@color/umeng_socialize_divider"  
     android:dividerHeight="1px">
 </ListView>
-  <TextView 
+ <!--  <TextView 
     
        android:id="@+id/change" 
     android:layout_width="match_parent"
@@ -38,7 +40,7 @@
     android:gravity="right"
     android:layout_marginBottom="10dp"
       
-      />
+      /> -->
   <TextView 
        android:id="@+id/lastlogintime" 
     android:layout_width="match_parent"
