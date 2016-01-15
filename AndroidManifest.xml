@@ -71,7 +71,7 @@
             </intent-filter>
         </activity>
            <activity
-            android:name="com.example2.we123.MainActivity"
+            android:name="com.example2.we123.newUser"
             android:label="MainActivity"
            >
         

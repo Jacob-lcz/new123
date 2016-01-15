@@ -56,48 +56,39 @@ String sex;
 	day=cal.get(Calendar.DAY_OF_MONTH);
 		btn=(Button) findViewById(R.id.btn);
 		name=(EditText) findViewById(R.id.name);
-//		registname=(EditText) findViewById(R.id.registname);
 		registpass=(EditText) findViewById(R.id.registpass);
 		registmail=(EditText) findViewById(R.id.registmail);
 		birth=(EditText) findViewById(R.id.birth);
-		
-			
-//	RadioGroud获取信息
+	
+//	RadioGroud获取性别信息
 		RG.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-
 			@Override
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
 				// TODO Auto-generated method stub
 			RadioButton  rad=(RadioButton) findViewById(checkedId);
-          sex= rad.getText().toString();	
-				
-				
+          sex= rad.getText().toString();			
 			}
 		});
 	
-//		  一获取焦点就执行
-	birth.setOnFocusChangeListener(new OnFocusChangeListener() {
-		
+//		  出生日期 一获取焦点就执行（主要是在edittext里面不用这个监听的话会导致第一次点击不弹出选择对话框，’
+//		对话框会等edittext获取到焦点点击才会弹出）
+	birth.setOnFocusChangeListener(new OnFocusChangeListener() {	
 		@Override
 		public void onFocusChange(View v, boolean hasFocus) {
 			// TODO Auto-generated method stub
 			if(hasFocus){
 			show()	;
-			}else{
-			
+			}else{	
 			}
 			}
 		
 	});
-
-
-	
+//注册按钮的监听事件，并设置正则表达式防止不规范的输入
 		btn.setOnClickListener(new OnClickListener() {
 			
 			@Override
 			public void onClick(View v) {
 				final	String email=registmail.getText().toString().trim();
-
 				String birthday=birth.getText().toString().trim();
 				String  username =name.getText().toString().trim();
 				 String sex1=sex;
@@ -106,9 +97,7 @@ String sex;
 //				String userid=registname.getText().toString().trim();
 				String pass=registpass.getText().toString().trim();
 				 String lmd5="email:"+email+"pwd:"+pass;
-				   String registmd5=new MD5(lmd5).md5(lmd5);
-				   
-		
+				   String registmd5=new MD5(lmd5).md5(lmd5);				   
 				if (username.equals("") ) {
 					 Toast.makeText(RegistModel.this, "昵称不能为空", Toast.LENGTH_SHORT)
 					 .show();
@@ -138,23 +127,15 @@ String sex;
 
 								regist.put("email", email);
 								regist.put("birthday", birthday);
-								regist.put("sex",sex1);
-		
-//								 Toast.makeText(RegistModel.this,regist.toString(), Toast.LENGTH_LONG).show();
-								 new RegistThread(RegistModel.this,regist,url,TAG).show();
-//						String url="http://loginonother.sinaapp.com/api/Customers/"+registmd5;
-			
-//								 new UpdateThread(RegistModel.this,regist,url,TAG).show();
+								regist.put("sex",sex1);		
+//								构造好json数据进行注册
+								 new RegistThread(RegistModel.this,regist,url,TAG).show();				
 							} catch (JSONException e) {
 								// TODO Auto-generated catch block
 								e.printStackTrace();
 							}
 							
-					 }
-
-				
-		
-				 
+					 }			 
 			}
 		});
 	
@@ -174,24 +155,15 @@ String sex;
 			}
 			
 			
-		}, year, month,day).show();
-	
-		
+		}, year, month,day).show();	
 	}
-
-	
-//private boolean EmailFormat(String eMAIL1) {
-//	//邮箱判断正则表达式
-//	 Pattern pattern = Pattern
-//	 .compile("\\w+([-+.]\\w+)*@\\w+([-.]\\w+)*\\.\\w+([-.]\\w+)*");
-//	 Matcher mc = pattern.matcher(email);
-//	 return mc.matches();
-//	 }
 	public static boolean EmailFormat(String email) {  
         String emailPattern = "[a-zA-Z0-9][a-zA-Z0-9._-]{2,16}[a-zA-Z0-9]@[a-zA-Z0-9]+.[a-zA-Z0-9]+";  
         boolean result = Pattern.matches(emailPattern, email);  
         return result;
 }
+	
+//	这种在最外层的activity（就是说没有跳转到新的activity），在已完成就finish（），这样的话就不会出现按返回键跳回当前界面
 	@Override
 	protected void onStop() {
 		// TODO Auto-generated method stub

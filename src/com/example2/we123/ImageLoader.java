@@ -15,7 +15,8 @@ import android.os.Handler;
 import android.os.Message;
 import android.telecom.Connection;
 import android.widget.ImageView;
-
+//图片载入工具类：功能就是传进一个view对象和一个图片请求链接，当请求成功就会自动将图片载入view。
+//主要是请求和用handler更新Ui
 public class ImageLoader {
 	private ImageView mImageView;
 	 private Handler mhandler=new Handler(){
