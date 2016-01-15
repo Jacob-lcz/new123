@@ -3,7 +3,7 @@
     package="com.example2.we123"
     android:versionCode="1"
     android:versionName="1.0" >
-
+<uses-feature android:glEsVersion="0x00010001" android:required="true" />
     <uses-sdk
         android:minSdkVersion="14"
         android:targetSdkVersion="21" />
